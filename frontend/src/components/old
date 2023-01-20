@@ -1,0 +1,70 @@
+<div className="flex justify-center items-center h-[100vh]">
+      <div className="relative h-[600px] w-[360px] screen">
+        <div className="z-[1] relative h-[100%]">
+          <form onSubmit={formik.handleSubmit}>
+            <div className="">
+              <input
+                className=""
+                id="firstname"
+                type="text"
+                placeholder="First Name"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.firstname}
+              />
+              {formik.touched.firstname && formik.errors.firstname ? (
+                <p className="text-red-700">{formik.errors.firstname}</p>
+              ) : null}
+            </div>
+            <div>
+              <input
+                className=""
+                placeholder="Last Name"
+                id="lastname"
+                type="text"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.lastname}
+              />
+              {formik.touched.lastname && formik.errors.lastname ? (
+                <p className="">{formik.errors.lastname}</p>
+              ) : null}
+            </div>
+
+            <div className="">
+              <input
+                className=""
+                id="code"
+                type="text"
+                placeholder="Your code"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.number}
+              />
+              {formik.touched.code && formik.errors.code ? (
+                <p className="text-red-700">{formik.errors.code}</p>
+              ) : null}
+            </div>
+            <div className="">
+              <input
+                className=""
+                id="message"
+                type="text"
+                placeholder="Your message"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+              />
+              {formik.touched.message && formik.errors.message ? (
+                <p className="text-red-700">{formik.errors.message}</p>
+              ) : null}
+            </div>
+            <div className="">
+              <button type="submit" className="">
+                send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
